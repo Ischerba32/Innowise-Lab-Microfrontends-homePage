@@ -1,0 +1,46 @@
+.loginForm {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+
+	height: 100vh;
+}
+
+.loginCard {
+	padding: 30px;
+
+	transition: all ease-in 0.2s;
+}
+
+.loginCard form {
+	display: grid;
+	justify-items: center;
+	gap: 30px;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 20px;
+
+	align-items: baseline;
+}
+
+.loadingBtn {
+	transition: all ease-in 0.2s;
+}
+
+.loadingBtn span {
+	margin-right: 5px;
+}
+
+.link:hover {
+	transition: all ease-in 0.2s;
+	text-decoration: underline;
+
+	color: var(--primary);
+}
+
+.errorMsg {
+	color: var(--red);
+}
