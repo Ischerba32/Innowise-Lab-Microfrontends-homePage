@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { Button, Card, Input } from "../UI";
 import AuthFormProps from "./props";
 import styles from "./styles.module.scss";
+import { useTheme } from "../../hooks/useTheme";
 
 const AuthForm = ({
   onSubmit,
@@ -20,6 +21,8 @@ const AuthForm = ({
     reset,
     clearErrors,
   } = useForm<IAuthForm>();
+
+  const { theme } = useTheme();
 
   const formSubmit = ({ email, password }: IAuthForm) => {
     toast.promise(onSubmit({ email, password }), {
@@ -41,7 +44,7 @@ const AuthForm = ({
   return (
     <div className={styles.loginForm}>
       <Card color="blue" className={styles.loginCard}>
-        <form onSubmit={handleSubmit(formSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <Input
             {...register("email", {
               required: { value: true, message: "Enter the email" },
@@ -76,7 +79,7 @@ const AuthForm = ({
           </div>
         </form>
       </Card>
-      <ToastContainer
+      {/* <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
@@ -86,8 +89,8 @@ const AuthForm = ({
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        // theme={theme === 'light' ? 'light': 'dark'}
-      />
+        theme={theme === 'light' ? 'light': 'dark'}
+      /> */}
     </div>
   );
 };

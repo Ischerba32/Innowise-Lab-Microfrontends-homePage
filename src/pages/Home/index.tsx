@@ -1,7 +1,9 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../components/UI";
+import Greeting from "../../components/Greeting";
+import { Header } from "../../components/Header";
+import { Button, Card, Htag } from "../../components/UI";
 import { auth } from "../../config/firebaseConfig";
 
 const Home = () => {
@@ -14,13 +16,8 @@ const Home = () => {
 
   return (
     <>
-      <p>Host</p>
-      <Button appearance="primary" onClick={handleClickButton}>
-        SignOut
-      </Button>
-      <Button appearance="primary" onClick={() => navigate("/todo")}>
-        ToDo
-      </Button>
+      <Header />
+      <Greeting />
     </>
   );
 };
