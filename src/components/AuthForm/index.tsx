@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
-import IAuthForm from "../../../../../host/src/interfaces/authForm.interface";
+import IAuthForm from "../../interfaces/authForm.interface";
 import { ToastContainer, toast } from "react-toastify";
 import { Button, Card, Input } from "../UI";
 import AuthFormProps from "./props";

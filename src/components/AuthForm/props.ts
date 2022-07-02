@@ -1,6 +1,6 @@
 import { SubmitHandler } from "react-hook-form";
 
-import AuthForm from "../../../../../host/src/interfaces/authForm.interface";
+import AuthForm from "../../interfaces/authForm.interface";
 
 export default interface AuthFormProps {
   onSubmit: SubmitHandler<AuthForm>;
