@@ -52,7 +52,7 @@ module.exports = (webpackConfigEnv, argv) => {
     plugins: [
       // new Dotenv()
       new webpack.DefinePlugin({
-        "process.env": JSON.stringify(process.env);
+        "process.env": JSON.stringify(process.env)
       }),
     ],
   });
