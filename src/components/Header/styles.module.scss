@@ -13,8 +13,8 @@
 
 	&__pages {
 		display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-self: center;
+		grid-template-columns: 1fr 1fr;
+		justify-self: center;
 
 		h3:hover {
 			color: var(--primary);
@@ -26,8 +26,8 @@
 
 	&__buttons {
 		display: grid;
-    grid-template-columns: 1fr 1fr;
-    // justify-self: center;
+		grid-template-columns: 1fr 1fr;
+		// justify-self: center;
 		justify-self: end;
 	}
 }
